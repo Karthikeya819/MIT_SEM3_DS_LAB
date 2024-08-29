@@ -41,6 +41,7 @@ int main(){
     int Command;
     char temp;
     STACK stack;
+    stack.tos = -1;
     printf("Welcome to STACK! \n");
     printf("Current Max Stack Size : %d \n",Max_Size);
     printf("1) Push an Element to Stack \n2) Pop an Element from Stack \n3) Dispaly Stack \n4) Exit \n");
@@ -49,11 +50,11 @@ int main(){
         scanf("%d",&Command);
         if(Command == 4)exit(0);
         else if(Command == 3)display(&stack);
-        else if(Command == 2){char out = pop(&stack);};
+        else if(Command == 2){char out = pop(&stack);}
         else if(Command == 1){
-            fflush(stdin);
-            printf("    Enter a Char to Stack: ");
-            scanf("%c",&temp);
+            printf("    Enter a Char to Stack:");
+            fflush(stdout);
+            scanf("%s",&temp);
             push(&stack,temp);
         }else{
             printf("Invalid Menu Option! \n");
