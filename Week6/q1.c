@@ -1,6 +1,4 @@
-/*
-Evaluate a given prefix expression using stack
-*/
+/*Evaluate a given prefix expression using stack*/
 
 #include <stdio.h>
 #include <stdlib.h>
