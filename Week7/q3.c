@@ -23,6 +23,6 @@ int main(){
         scanf("%d %d",&N,&K);
         Output[i++] = ((K - 1)/3) == (((K+1)-1)/3);
     }
-    for(int j = 0;j<i;j++){printf("%s \n",(Output[j])?"Yes":"No");
+    for(int j = 0;j<i;j++)printf("%s \n",(Output[j])?"Yes":"No");
     return 0;
 }
