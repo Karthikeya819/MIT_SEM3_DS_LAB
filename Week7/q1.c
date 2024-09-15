@@ -17,15 +17,11 @@ void Initialize_Queue(Queue *q){
     q->rear = -1;
 }
 int is_Full(Queue *q){
-    if((q->rear+1)%Max_Size == q->front){
-        return 1;
-    }
+    if((q->rear+1)%Max_Size == q->front)return 1;
     return 0;
 }
 int is_Empty(Queue *q){
-    if(q->rear == -1){
-        return 1;
-    }
+    if(q->rear == -1)return 1;
     return 0;
 }
 void insertcq(Queue *q,char *item){
@@ -44,16 +40,12 @@ void insertcq(Queue *q,char *item){
 }
 
 void deletecq(Queue *q,char *output){
-    if(is_Empty(q)){
-        printf("Queue is Empty!");
-    }
+    if(is_Empty(q))printf("Queue is Empty!");
     strcpy(output,q->Items[q->front]);
     if(q->front == q->rear){
         q->front = -1;
         q->rear = -1;
-    }else{
-        q->front = (q->front + 1) % Max_Size;
-    }
+    }else q->front = (q->front + 1) % Max_Size;
 }
 
 void displaycq(Queue *q){
@@ -64,9 +56,7 @@ void displaycq(Queue *q){
     int i = q->front;
     while (1) {
         printf("%s ", q->Items[i]);
-        if (i == q->rear) {
-            break;
-        }
+        if (i == q->rear)break;
         i = (i + 1) % Max_Size;
     }
     printf("\n");
