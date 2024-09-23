@@ -42,6 +42,7 @@ int eval(){
             push(symbol);
             printf("%c",symbol);
         }
+        token = get_token(&symbol,&n);
     }
 }
 
