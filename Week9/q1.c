@@ -13,9 +13,7 @@ node_ptr EnQueue(node_ptr start,int item){
 	node_ptr new_node = (node_ptr) malloc(sizeof(node_ptr));
 	new_node->data = item;
 	new_node->link = NULL;
-	if(start == NULL){
-		return new_node;
-	}
+	if(start == NULL)return new_node;
 	node_ptr ptr;
 	ptr = start;
 	while(ptr->link != NULL){
@@ -30,9 +28,7 @@ node_ptr DeQueue(node_ptr start){
 		return start;
 	}
 	printf("%d \n",start->data);
-	if(start->link == NULL){
-		return NULL;
-	}
+	if(start->link == NULL)return NULL;
 	node_ptr ptr;
 	ptr = start->link;
 	free(start);
