@@ -83,10 +83,8 @@ int Compute(char Exp[],int prefix){
 }
 
 int CheckExpression(char Exp[]){
-    //Stack stack;stack.tos = -1;
     int roundf = 0;
-    int len = strlen(Exp);
-    for(int i = 0;i<len;i++){
+    for(int i = 0;i<strlen(Exp);i++){
         if(Exp[i] == '(')roundf++;
         else if(Exp[i] == ')')roundf--;
     }
@@ -129,17 +127,5 @@ int main(){
         }
         
     }
-    // head = Insert(head,"Karthikeya");
-    // head = Insert(head,"Vasistha");
-    // head = Insert(head,"Akshay");
-    // Display(head);
-    // Stack stack;
-    // stack.tos = -1;
-    // push(&stack,'c');
-    // push(&stack,'d');
-    // printf("Popped Element: %c",pop(&stack));
-    // printf("Balance Expression: %d ",CheckExpression("(Kart(h(i)keya))"));
-    // printf("PostFix Result: %d",Compute("23-",0));
-    // printf("Prefix Result: %d",Compute("-32",1));
     return 0;
 }
